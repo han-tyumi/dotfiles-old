@@ -4,12 +4,13 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/bit bit
 
 export EDITOR=code
 
 source ~/.fzf.zsh
 source ~/.zsh_plugins.sh
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias update_plugins='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
 alias reload='exec $SHELL'
