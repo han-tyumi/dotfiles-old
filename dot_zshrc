@@ -1,0 +1,14 @@
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/.zsh_plugins.sh
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias update_plugins='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
+alias reload='exec $SHELL'

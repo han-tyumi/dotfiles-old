@@ -1,0 +1,6 @@
+denysdovhan/spaceship-prompt
+MichaelAquilina/zsh-you-should-use
+ohmyzsh/ohmyzsh path:plugins/brew
+ohmyzsh/ohmyzsh path:plugins/git
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
