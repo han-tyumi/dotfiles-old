@@ -6,6 +6,7 @@ else
 fi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
+source <(chezmoi completion zsh)
 
 export EDITOR=code
 

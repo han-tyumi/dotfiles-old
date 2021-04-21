@@ -1,0 +1,20 @@
+{{- $spotify_username := dig "spotify" "username" "" . -}}
+{{- if not $spotify_username -}}
+{{-   $spotify_username = promptString "spotify username" -}}
+{{- end -}}
+
+{{- $spotify_client_id := dig "spotify" "client_id" "" . -}}
+{{- if not $spotify_client_id -}}
+{{-   $spotify_client_id = promptString "spotify client id" -}}
+{{- end -}}
+
+{{- $spotify_client_secret := dig "spotify" "client_secret" "" . -}}
+{{- if not $spotify_client_secret -}}
+{{-   $spotify_client_secret = promptString "spotify client secret" -}}
+{{- end -}}
+
+[data]
+[data.spotify]
+username = {{ $spotify_username | quote }}
+client_id = {{ $spotify_client_id | quote }}
+client_secret = {{ $spotify_client_secret | quote }}

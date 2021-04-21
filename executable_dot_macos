@@ -4,13 +4,18 @@ if ! [ -x "$(command -v brew)" ]; then
   curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 fi
 
-brew install bit-git
-brew install chezmoi
-brew install antibody
-brew install fzf
-
 brew tap homebrew/cask-fonts
-brew install font-caskaydia-cove-nerd-font
+
+brew install \
+  antibody \
+  bit-git \
+  chezmoi \
+  font-caskaydia-cove-nerd-font \
+  fzf \
+  spotifyd \
+  spotify-tui
+
+brew services start spotifyd
 
 osascript -e 'tell application "System Preferences" to quit'
 
