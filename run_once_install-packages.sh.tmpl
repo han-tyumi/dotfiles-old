@@ -18,6 +18,8 @@ brew install \
 
 brew services start spotifyd
 
+antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
 osascript -e 'tell application "System Preferences" to quit'
 
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
