@@ -1,5 +1,6 @@
 denysdovhan/spaceship-prompt
 MichaelAquilina/zsh-you-should-use
+ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/asdf
 ohmyzsh/ohmyzsh path:plugins/brew
 ohmyzsh/ohmyzsh path:plugins/dotenv
