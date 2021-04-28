@@ -4,6 +4,8 @@
 # [Homebrew](https://brew.sh/)
 if ! [ -x "$(command -v brew)" ]; then
   curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+  sudo chgrp -R admin $(brew --prefix)
+  sudo chmod -R g+rwX $(brew --prefix)
 fi
 
 ## Taps

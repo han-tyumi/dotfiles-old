@@ -4,9 +4,6 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -u -C
 fi
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/bit bit
-source <(chezmoi completion zsh)
 
 export ZSH_CACHE_DIR=~/Library/Caches/zsh
 export EDITOR=code
