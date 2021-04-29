@@ -1,18 +1,16 @@
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  compinit
+  compinit -u
 else
-  compinit -C
+  compinit -u -C
 fi
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/bit bit
-source <(chezmoi completion zsh)
 
 export ZSH_CACHE_DIR=~/Library/Caches/zsh
 export EDITOR=code
 
-source ~/.fzf.zsh
 source ~/.zsh_plugins.sh
 
 alias antibody_bundle='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
 alias reload='exec $SHELL'
+alias defaults_save='defaults read > /tmp/before'
+alias defaults_diff='defaults read > /tmp/after; code --diff /tmp/before /tmp/after'
