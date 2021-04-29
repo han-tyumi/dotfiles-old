@@ -12,3 +12,5 @@ source ~/.zsh_plugins.sh
 
 alias antibody_bundle='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
 alias reload='exec $SHELL'
+alias defaults_save='defaults read > /tmp/before'
+alias defaults_diff='defaults read > /tmp/after; code --diff /tmp/before /tmp/after'
