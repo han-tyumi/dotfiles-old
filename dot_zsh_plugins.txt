@@ -1,5 +1,5 @@
 denysdovhan/spaceship-prompt
-MichaelAquilina/zsh-you-should-use
+djui/alias-tips
 ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/asdf
 ohmyzsh/ohmyzsh path:plugins/brew
