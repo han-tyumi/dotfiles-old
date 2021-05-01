@@ -1,3 +1,13 @@
+{{- $git_username := dig "git" "username" "" . -}}
+{{- if not $git_username -}}
+{{-   $git_username = promptString "git username" -}}
+{{- end -}}
+
+{{- $git_email := dig "git" "email" "" . -}}
+{{- if not $git_email -}}
+{{-   $git_email = promptString "git email" -}}
+{{- end -}}
+
 {{- $spotify_username := dig "spotify" "username" "" . -}}
 {{- if not $spotify_username -}}
 {{-   $spotify_username = promptString "spotify username" -}}
@@ -14,6 +24,9 @@
 {{- end -}}
 
 [data]
+[data.git]
+username = {{ $git_username | quote }}
+email = {{ $git_email | quote }}
 [data.spotify]
 username = {{ $spotify_username | quote }}
 client_id = {{ $spotify_client_id | quote }}

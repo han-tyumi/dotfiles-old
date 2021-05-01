@@ -14,12 +14,16 @@ brew tap homebrew/cask-fonts
 ## Formulae / Casks
 brew install \
   antibody \
+  bat \
+  bit-git \
   chezmoi \
   coreutils \
   curl \
+  exa \
   font-caskaydia-cove-nerd-font \
   fzf \
   git \
+  git-delta \
   karabiner-elements \
   spotifyd \
   spotify-tui
@@ -40,3 +44,7 @@ osascript -e 'tell application "System Preferences" to quit'
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
 {{ end -}}
+
+git config --global user.name "{{ .git.username }}"
+git config --global user.email "{{ .git.email }}"
+git config --global core.pager delta
