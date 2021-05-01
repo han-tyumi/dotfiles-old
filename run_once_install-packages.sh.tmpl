@@ -45,6 +45,7 @@ defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
 {{ end -}}
 
+# Git
 git config --global user.name "{{ .git.username }}"
 git config --global user.email "{{ .git.email }}"
 git config --global core.pager delta
