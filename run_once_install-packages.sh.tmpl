@@ -43,6 +43,7 @@ osascript -e 'tell application "System Preferences" to quit'
 
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
+defaults write com.apple.dock mru-spaces -boolean false
 {{ end -}}
 
 # Git
