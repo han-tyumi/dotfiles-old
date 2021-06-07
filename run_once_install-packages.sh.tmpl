@@ -42,7 +42,10 @@ antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 osascript -e 'tell application "System Preferences" to quit'
 
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
+
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
+
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 {{ end -}}
 
 # Git
