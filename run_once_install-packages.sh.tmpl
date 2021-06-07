@@ -44,11 +44,13 @@ osascript -e 'tell application "System Preferences" to quit'
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
 
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
+defaults write com.apple.dock mru-spaces -boolean false
 
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -boolean false
 {{ end -}}
 
 # Git
 git config --global user.name "{{ .git.username }}"
 git config --global user.email "{{ .git.email }}"
 git config --global core.pager delta
+git config --global init.defaultBranch main
