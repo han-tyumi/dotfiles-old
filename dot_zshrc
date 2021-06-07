@@ -14,6 +14,8 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="💡"
 
 source ~/.zsh_plugins.sh
 
+[[ -f "$ASDF_DIR/plugins/java/set-java-home.zsh" ]] && source "$ASDF_DIR/plugins/java/set-java-home.zsh"
+
 alias git='bit'
 alias ls='exa'
 alias cat='bat'
