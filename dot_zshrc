@@ -16,6 +16,8 @@ source ~/.zsh_plugins.sh
 
 [[ -f "$ASDF_DIR/plugins/java/set-java-home.zsh" ]] && source "$ASDF_DIR/plugins/java/set-java-home.zsh"
 
+export PATH="$HOME/.deno/bin:$PATH"
+
 alias git='bit'
 alias ls='exa'
 alias cat='bat'
