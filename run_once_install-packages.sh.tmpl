@@ -36,15 +36,19 @@ brew services start spotifyd
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 
 # [Antibody](https://getantibody.github.io/)
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+antibody bundle <~/.zsh_plugins.txt >~/.zsh_plugins.sh
 
 # [Preferences](https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/)
 osascript -e 'tell application "System Preferences" to quit'
 
 defaults write 'Apple Global Domain' AppleInterfaceStyle -string Dark
 
+defaults write com.apple.AppleMultitouchTrackpad Clicking -boolean true
 defaults write com.apple.controlcenter 'NSStatusItem Visible UserSwitcher' -boolean true
 defaults write com.apple.dock mru-spaces -boolean false
+defaults write com.apple.HIToolbox AppleFnUsageType -integer 0
+defaults write com.apple.touchbar.agent PresentationModeFnModes -dict functionKeys fullControlStrip
+defaults write com.apple.touchbar.agent PresentationModeGlobal -string functionKeys
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -boolean false
 {{ end -}}
