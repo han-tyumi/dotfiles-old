@@ -20,7 +20,6 @@ brew install \
   coreutils \
   curl \
   exa \
-  font-caskaydia-cove-nerd-font \
   fzf \
   git \
   git-delta \
@@ -33,7 +32,9 @@ brew install --HEAD neovim
 brew services start spotifyd
 
 # [asdf](https://asdf-vm.com/#/)
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+if [ ! -d ~/.asdf ]; then
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+fi
 
 # [Antibody](https://getantibody.github.io/)
 antibody bundle <~/.zsh_plugins.txt >~/.zsh_plugins.sh
