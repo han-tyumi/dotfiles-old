@@ -3,9 +3,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 # [Homebrew](https://brew.sh/)
 if ! [ -x "$(command -v brew)" ]; then
-  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-  sudo chgrp -R admin $(brew --prefix) /usr/local/share/bash-completion/completions /usr/local/share/emacs/site-lisp
-  sudo chmod -R g+rwX $(brew --prefix) /usr/local/share/bash-completion/completions /usr/local/share/emacs/site-lisp
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 ## Taps
